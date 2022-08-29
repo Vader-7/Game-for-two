@@ -30,23 +30,19 @@
   }
   
   :root {
-      /* Set the background of the entire app */
-      --ion-background-color: #c4c4c4;
-      --ion-text-color: #000;	
-      --ion-border-color: #c4c4c4;
-    
-      /* Set the font family of the entire app */
       --ion-font-family: 'Jetbrains';
     }
     ion-breadcrumb {
-      font-size: 1.2rem;
-      color: #000;
+      font-size: 1.3rem;
     }
     ion-icon {
-      font-size: 1.2rem;
-      color: #000;
+      font-size: 18px;;
     }
     ion-content {
       text-align: center;
       padding: 100px !important;
+    }
+    #logo-icon, reload-icon{
+      width: 40px;
+      height: 30px;
     }

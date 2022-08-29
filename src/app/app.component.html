@@ -5,7 +5,7 @@
 <ion-content>
   <br>
   <ion-breadcrumb class="ion-padding">
-    <ion-icon slot="start" name="game-controller"></ion-icon>
+    <ion-icon id="logo-icon" slot="start" name="game-controller"></ion-icon>
     Game
   </ion-breadcrumb>
   <br>
@@ -71,6 +71,6 @@
 </ion-grid>
 <br>
 <ion-button [hidden]="!show" fill="clear" (click)="restart()">
-  <ion-icon  name="reload-circle"></ion-icon>
+  <ion-icon id="reload-icon" name="reload-circle" size="large"></ion-icon>
 </ion-button>
 </ion-content>
