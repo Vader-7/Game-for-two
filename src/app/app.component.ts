@@ -89,8 +89,7 @@ export class AppComponent {
   }
 }
 // End of file
-
-  /*{
+/*{
     console.log(evento.srcElement.id);
     let idelemento=evento.srcElement.id
     document.getElementById(idelemento).setAttribute('disabled','true');*/
