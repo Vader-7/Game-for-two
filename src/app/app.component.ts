@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Button } from 'protractor';
 import { HotToastService } from '@ngneat/hot-toast';
+import { kMaxLength } from 'buffer';
 
 @Component({
   selector: 'app-root',
@@ -69,7 +70,7 @@ export class AppComponent {
     if(this.mov === 8 && this.ganador.length == 0) {
         this.ganador = 'Draw';
     }
-    else if(this.ganador != '') {
+    else if(this.ganador.length > 0) {
         this.showToast();
         this.end = true;
         this.show = true;
