@@ -20,7 +20,7 @@ export class AppComponent {
     ["1","4","7"],
     ["2","5","8"],
     ["0","4","8"],
-    ["2","4","6"]
+    ["2","4","6"],
   ];
   end: boolean = false;
   show: boolean = false;
@@ -35,8 +35,9 @@ export class AppComponent {
         style: {
           padding: '16px',
           color: '#fffff',
-          backgroundColor: '#ccccc',
+          backgroundColor: '#939FB3',
           borderRadius: '15px',
+          fontSize: '1.3rem',
         },
     });
   }
@@ -45,28 +46,30 @@ export class AppComponent {
     console.log(evento.srcElement.id);
     let idelemento = evento.srcElement.id;
     document.getElementById(idelemento).setAttribute('disabled','true');
+    console.log(this.ganador);
     if(this.mov % 2 == 0) {
-        document.getElementById(idelemento).setAttribute('color', 'success');
-        this.movJugador1.push(idelemento);
-        for(let i = 0; i < this.movGanador.length; i++) {
-            if(this.movGanador[i].every(x => this.movJugador1.includes(x))) {
-              this.ganador = 'Player two wins';
-          }
+      document.getElementById(idelemento).setAttribute('color', 'success');
+      this.movJugador1.push(idelemento);
+      console.log(this.movJugador1);
+      for(let i = 0; i < this.movGanador.length; i++) {
+        if(this.movGanador[i].every(x => this.movJugador1.includes(x))) {
+          this.ganador = 'Player two wins';
+        }
       }
     } 
-    else {  
-        document.getElementById(idelemento).setAttribute('color', 'danger');
-        this.movJugador2.push(idelemento);
-        for(let i = 0; i < this.movGanador.length; i++) {
-            if(this.movGanador[i].every(x => this.movJugador2.includes(x))) {
-              this.ganador = 'Player one wins';
+    else{  
+      document.getElementById(idelemento).setAttribute('color', 'danger');
+      this.movJugador2.push(idelemento);
+      for(let x = 0; x < this.movGanador.length; x++) {
+        if(this.movGanador[x].every(x => this.movJugador2.includes(x))) {
+          this.ganador = 'Player one wins';
           }
         }
       }
-      if(this.mov === 8) {
+    if(this.mov === 8 && this.ganador.length == 0) {
         this.ganador = 'Draw';
-      }
-      else if(this.ganador) {
+    }
+    else if(this.ganador != '') {
         this.showToast();
         this.end = true;
         this.show = true;
@@ -85,7 +88,6 @@ export class AppComponent {
   }
 }
 // End of file
-  
 
   /*{
     console.log(evento.srcElement.id);

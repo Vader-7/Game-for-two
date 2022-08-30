@@ -31,18 +31,27 @@
   
   :root {
       --ion-font-family: 'Jetbrains';
+      --ion-font-weight: bold;
+      --ion-background-color: #151515;
+      --ion-background-color-alpha: 0.9;
     }
     ion-breadcrumb {
       font-size: 1.3rem;
+      color: #939FB3;
     }
     ion-icon {
-      font-size: 18px;;
+      font-size: 32px;
+    }
+    ion-button{
+      font-size: 1.3rem;
     }
     ion-content {
       text-align: center;
       padding: 100px !important;
     }
-    #logo-icon, reload-icon{
-      width: 40px;
-      height: 30px;
+    #reload-icon{
+      font-size: 64px;
+    }
+    #logo-icon{
+      font-size: 32px;
     }
