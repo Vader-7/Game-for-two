@@ -35,7 +35,7 @@ export class AppComponent {
       position: 'bottom-center',
         style: {
           padding: '16px',
-          color: '#fffff',
+          color: '#fff',
           backgroundColor: '#939FB3',
           borderRadius: '15px',
           fontSize: '1.3rem',
@@ -67,7 +67,7 @@ export class AppComponent {
           }
         }
       }
-    if(this.mov === 8 && this.ganador.length == 0) {
+    if(this.mov == 8 && this.ganador.length == 0) {
         this.ganador = 'Draw';
     }
     else if(this.ganador.length > 0) {
