@@ -47,7 +47,6 @@ export class AppComponent {
     console.log(evento.srcElement.id);
     let idelemento = evento.srcElement.id;
     document.getElementById(idelemento).setAttribute('disabled','true');
-    console.log(this.ganador);
     if(this.mov % 2 == 0) {
       document.getElementById(idelemento).setAttribute('color', 'success');
       this.movJugador1.push(idelemento);
