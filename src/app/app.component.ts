@@ -76,15 +76,15 @@ export class AppComponent {
         this.show = true;
       }
     }
-    restart() {
-      this.mov = 0;
-      this.movJugador1 = [];
-      this.movJugador2 = [];
-      this.ganador = '';
-      this.end = false;
-      this.show = false;
-      for(let i = 0; i < 9; i++) {
-        document.getElementById(i.toString()).setAttribute('color', 'primary');
+  restart() {
+    this.mov = 0;
+    this.movJugador1 = [];
+    this.movJugador2 = [];
+    this.ganador = '';
+    this.end = false;
+    this.show = false;
+    for(let i = 0; i < 9; i++) {
+      document.getElementById(i.toString()).setAttribute('color', 'primary');
     }
   }
 }
