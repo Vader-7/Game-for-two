@@ -25,7 +25,7 @@ export class AppComponent {
   ];
   end: boolean = false;
   show: boolean = false;
-  ganador: string;
+  ganador: string = '';
   constructor(private toast: HotToastService) {}
     
   showToast() {
@@ -66,24 +66,29 @@ export class AppComponent {
           }
         }
       }
-    if(this.mov === 8 && this.ganador.length === 0) {
+    console.log(this.ganador);
+    console.log(this.mov);
+    if(this.mov == 9 && this.ganador == '') {
         this.ganador = 'Draw';
+        this.showToast();
+        this.end = true;
+        this.show = true;
     }
-    else if(this.ganador.length > 0) {
+    else if(this.ganador != '') {
         this.showToast();
         this.end = true;
         this.show = true;
       }
     }
-  restart() {
-    this.mov = 0;
-    this.movJugador1 = [];
-    this.movJugador2 = [];
-    this.ganador = '';
-    this.end = false;
-    this.show = false;
-    for(let i = 0; i < 9; i++) {
-      document.getElementById(i.toString()).setAttribute('color', 'primary');
+    restart() {
+      this.mov = 0;
+      this.movJugador1 = [];
+      this.movJugador2 = [];
+      this.ganador = '';
+      this.end = false;
+      this.show = false;
+      for(let i = 0; i < 9; i++) {
+        document.getElementById(i.toString()).setAttribute('color', 'primary');
     }
   }
 }
