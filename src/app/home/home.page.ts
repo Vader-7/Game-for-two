@@ -21,6 +21,11 @@ export class HomePage {
       ["0","4","8"],
       ["2","4","6"],
     ];
+    tablero = [
+      ["0","1","2"],
+      ["3","4","5"],
+      ["6","7","8"],
+    ];
     end: boolean = false;
     show: boolean = false;
     ganador: string = '';
@@ -30,7 +35,7 @@ export class HomePage {
       this.toast.show(this.ganador, {
         icon: '👏',
         duration: 2000,
-        position: 'top-center',
+        position: 'bottom-center',
           style: {
             padding: '16px',
             color: '#fff',
