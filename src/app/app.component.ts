@@ -67,7 +67,7 @@ export class AppComponent {
           }
         }
       }
-    if(this.mov == 8 && this.ganador.length == 0) {
+    if(this.mov === 8 && this.ganador.length === 0) {
         this.ganador = 'Draw';
     }
     else if(this.ganador.length > 0) {
