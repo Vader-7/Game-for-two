@@ -69,8 +69,6 @@ export class HomePage {
             }
           }
         }
-      console.log(this.ganador);
-      console.log(this.mov);
       if(this.mov == 9 && this.ganador == '') {
           this.ganador = 'Draw';
           this.showToast();
