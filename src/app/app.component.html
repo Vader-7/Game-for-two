@@ -2,78 +2,18 @@
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
 
+<ion-tabs>
+  <ion-tab-bar slot="game">
+    <ion-tab-button tab="schedule">
+      <ion-icon name="game-controller"></ion-icon>
+      <ion-label>GAME</ion-label>
+      <ion-badge>6</ion-badge>
+    </ion-tab-button>
 
-<ion-content class="ion-padding">
-  <br>
-  <ion-breadcrumb class="ion-padding">
-    <ion-icon id="logo-icon" slot="start" name="game-controller"></ion-icon>
-    Game
-  </ion-breadcrumb>
-  <br>
-<ion-grid>
-  <br>
-  <ion-row>
-    <ion-col size="4">
-      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="0">
-        <ion-icon name="{{icono}}"></ion-icon>
-      </ion-button>
-    </ion-col>
-    <ion-col size="4">
-      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="1">
-        <ion-icon name="{{icono}}"></ion-icon>
-      </ion-button>
-    </ion-col>
-    <ion-col size="4">
-      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="2">
-        <ion-icon name="{{icono}}"></ion-icon>
-      </ion-button>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-<br>
-<ion-grid>
-  <br>
-  <ion-row>
-    <ion-col size="4">
-      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="3">
-        <ion-icon name="{{icono}}"></ion-icon>
-      </ion-button>
-    </ion-col>
-    <ion-col size="4">
-      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="4">
-        <ion-icon name="{{icono}}"></ion-icon>
-      </ion-button>
-    </ion-col>
-    <ion-col size="4">
-      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="5">
-        <ion-icon name="{{icono}}"></ion-icon>
-      </ion-button>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-<br>
-<ion-grid>
-  <br>
-  <ion-row>
-    <ion-col size="4">
-      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="6">
-        <ion-icon name="{{icono}}"></ion-icon>
-      </ion-button>
-    </ion-col>
-    <ion-col size="4">
-      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="7">
-        <ion-icon name="{{icono}}"></ion-icon>
-      </ion-button>
-    </ion-col>
-    <ion-col size="4">
-      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="8">
-        <ion-icon name="{{icono}}"></ion-icon>
-      </ion-button>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-<br>
-<ion-button [hidden]="!show" fill="clear" (click)="restart()">
-  <ion-icon id="reload-icon" name="reload-circle" size="large"></ion-icon>
-</ion-button>
-</ion-content>
+    <ion-tab-button tab="info">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>INFO</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>

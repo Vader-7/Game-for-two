@@ -1,20 +1,79 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="ion-padding">
+  <br>
+  <ion-breadcrumb class="ion-padding">
+    <ion-icon id="logo-icon" slot="start" name="game-controller"></ion-icon>
+    Game
+  </ion-breadcrumb>
+  <br>
+<ion-grid>
+  <br>
+  <ion-row>
+    <ion-col size="4">
+      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="0">
+        <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="1">
+        <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="2">
+        <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<br>
+<ion-grid>
+  <br>
+  <ion-row>
+    <ion-col size="4">
+      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="3">
+        <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="4">
+        <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="5">
+        <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<br>
+<ion-grid>
+  <br>
+  <ion-row>
+    <ion-col size="4">
+      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="6">
+        <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="7">
+        <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button disabled="{{end}}" (click)="movimiento($event)" id="8">
+        <ion-icon name="{{icono}}"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<br>
+<ion-button [hidden]="!show" fill="clear" (click)="restart()">
+  <ion-icon id="reload-icon" name="reload-circle" size="large"></ion-icon>
+</ion-button>
 </ion-content>
