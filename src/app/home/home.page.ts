@@ -35,7 +35,7 @@ export class HomePage {
       this.toast.show(this.ganador, {
         icon: '👏',
         duration: 2000,
-        position: 'bottom-center',
+        position: 'top-right',
           style: {
             padding: '16px',
             color: '#fff',
@@ -50,16 +50,22 @@ export class HomePage {
       console.log(evento.srcElement.id);
       let idelemento = evento.srcElement.id;
       document.getElementById(idelemento).setAttribute('disabled','true');
-      if(this.mov % 2 == 0) {
+      if(this.mov % 2 === 0) {
         document.getElementById(idelemento).setAttribute('color', 'success');
         this.movJugador1.push(idelemento);
-        console.log(this.movJugador1);
         for(let i = 0; i < this.movGanador.length; i++) {
           if(this.movGanador[i].every(x => this.movJugador1.includes(x))) {
             this.ganador = 'Player two wins';
           }
+        for(let i = 0; i < 3; i++) {
+          for(let j = 0; j < 3; j++) {
+            if(this.tablero[i][j] === idelemento) {
+              this.tablero[i][j] = 'X';
+              }
+            }
+          }
         }
-      } 
+      }
       else{  
         document.getElementById(idelemento).setAttribute('color', 'danger');
         this.movJugador2.push(idelemento);
@@ -69,13 +75,13 @@ export class HomePage {
             }
           }
         }
-      if(this.mov == 9 && this.ganador == '') {
+      if(this.mov === 9 && this.ganador === '') {
           this.ganador = 'Draw';
           this.showToast();
           this.end = true;
           this.show = true;
       }
-      else if(this.ganador != '') {
+      else if(this.ganador !== '') {
           this.showToast();
           this.end = true;
           this.show = true;
