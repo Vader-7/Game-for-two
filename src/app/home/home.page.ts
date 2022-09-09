@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HotToastService } from '@ngneat/hot-toast';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -29,9 +30,22 @@ export class HomePage {
     end: boolean = false;
     show: boolean = false;
     ganador: string = '';
-    constructor(private toast: HotToastService) {}
-      
-    showToast() {
+    constructor(
+      public alertController: AlertController
+      ) {}
+    
+    async presentAlert() {
+      const alert = await this.alertController.create({
+        header: 'Alert',
+        message: 'This is an alert!',
+        buttons: ['OK'],
+      });
+
+      await alert.present();
+      let result = await alert.onDidDismiss();
+      console.log(result);
+    }
+    /*showToast() {
       this.toast.show(this.ganador, {
         icon: '👏',
         duration: 2000,
@@ -44,7 +58,7 @@ export class HomePage {
             fontSize: '1.3rem',
           },
       });
-    }
+    }*/
     movimiento(evento) {
       this.mov++;
       console.log(evento.srcElement.id);
@@ -77,12 +91,12 @@ export class HomePage {
         }
       if(this.mov === 9 && this.ganador === '') {
           this.ganador = 'Draw';
-          this.showToast();
+          //this.showToast();
           this.end = true;
           this.show = true;
       }
       else if(this.ganador !== '') {
-          this.showToast();
+          //this.showToast();
           this.end = true;
           this.show = true;
         }
