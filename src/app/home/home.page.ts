@@ -31,10 +31,11 @@ export class HomePage {
     show: boolean = false;
     ganador: string = '';
     constructor(
-      public alertController: AlertController
+      //public alertController: AlertController,
+      public toast: HotToastService
       ) {}
     
-    async presentAlert() {
+    /*async presentAlert() {
       const alert = await this.alertController.create({
         header: 'Alert',
         message: 'This is an alert!',
@@ -44,8 +45,8 @@ export class HomePage {
       await alert.present();
       let result = await alert.onDidDismiss();
       console.log(result);
-    }
-    /*showToast() {
+    }*/
+    showToast() {
       this.toast.show(this.ganador, {
         icon: '👏',
         duration: 2000,
@@ -58,7 +59,7 @@ export class HomePage {
             fontSize: '1.3rem',
           },
       });
-    }*/
+    }
     movimiento(evento) {
       this.mov++;
       console.log(evento.srcElement.id);
@@ -91,12 +92,12 @@ export class HomePage {
         }
       if(this.mov === 9 && this.ganador === '') {
           this.ganador = 'Draw';
-          //this.showToast();
+          this.showToast();
           this.end = true;
           this.show = true;
       }
       else if(this.ganador !== '') {
-          //this.showToast();
+          this.showToast();
           this.end = true;
           this.show = true;
         }
