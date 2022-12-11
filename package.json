@@ -25,6 +25,7 @@
     "@capacitor/ios": "4.1.0",
     "@capacitor/keyboard": "4.0.1",
     "@capacitor/status-bar": "4.0.1",
+    "@ionic-native/sqlite": "^5.36.0",
     "@ionic/angular": "^6.1.9",
     "@ngneat/hot-toast": "^4.1.0",
     "@ngneat/overview": "^3.0.0",

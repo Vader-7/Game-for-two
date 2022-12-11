@@ -27,7 +27,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* dark mode variables go here */
-    --ion-background-color: linear-gradient(307deg, rgba(228,229,230,1) 0%, rgba(0,65,106,1) 30%);
+    --ion-background-color: rgb(233, 233, 233);
     --ion-background-color-alpha: 0.9;
   }
 }
@@ -38,8 +38,7 @@
   
   :root {
       --ion-font-weight: bold;
-      --ion-background-color: linear-gradient(307deg, rgba(228,229,230,1) 0%, rgba(0,65,106,1) 68%);
-      --ion-background-color-alpha: 0.9;
+      --ion-background-color: rgb(233, 233, 233);
 
     }
     ion-breadcrumb {
