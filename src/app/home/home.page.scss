@@ -22,3 +22,12 @@
 #container a {
   text-decoration: none;
 }
+
+ion-grid{
+  padding-top: 7%;
+}
+@media (max-width: 768px) {
+  ion-grid{
+    padding-top: 0%;
+  }
+}

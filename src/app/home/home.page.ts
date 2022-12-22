@@ -50,9 +50,9 @@ export class HomePage {
       this.toast.show(this.ganador, {
         icon: '👏',
         duration: 2000,
-        position: 'top-right',
+        position: 'bottom-right',
           style: {
-            padding: '16px',
+            padding: '20px',
             color: '#fff',
             backgroundColor: '#939FB3',
             borderRadius: '15px',
