@@ -52,7 +52,7 @@ export class HomePage {
         duration: 2000,
         position: 'bottom-right',
           style: {
-            padding: '20px',
+            padding: '16px',
             color: '#fff',
             backgroundColor: '#939FB3',
             borderRadius: '15px',
