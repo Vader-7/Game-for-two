@@ -24,23 +24,19 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* dark mode variables go here */
-    --ion-background-color: rgb(233, 233, 233);
-    --ion-background-color-alpha: 0.9;
-  }
-}
 @font-face {   
     font-family: 'Jetbrains';    //This is what we are going to call
     src: url('/assets/fonts/JetBrainsMono-VariableFont_wght.ttf');
   }
-  
-  :root {
-      --ion-font-weight: bold;
-      --ion-background-color: rgb(233, 233, 233);
-
+  ion-content{
+    --background: rgb(227, 227, 227);
+  }
+  // dark mode colors
+  @media (prefers-color-scheme: dark) {
+    ion-content{
+      --background: rgb(27, 27, 27);
     }
+  }
     ion-breadcrumb {
       font-size: 1.3rem;
       color: #939FB3;
