@@ -1,5 +1,5 @@
 # Game-for-two
-Simple Tic-Tac-Toe game with IONIC and Angular. To lazy to change the Ionic buttons to Angular Material buttons.
+Simple Tic-Tac-Toe game with IONIC and Angular. To lazy to change the Ionic buttons to Angular Material buttons or X and O instead of buttons.
 
 ## How to run
 ```
